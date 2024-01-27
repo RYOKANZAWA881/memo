@@ -43,7 +43,7 @@ elsif memo_type == 2
             new_memos << memo_line.chomp
         end
     
-        CSV.open(csv_file_name, "w") do |csv|
+        CSV.open(csv_file_name, "a") do |csv|
             new_memos.each do |memo|
                 csv << [memo]
             end
